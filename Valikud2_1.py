@@ -1,21 +1,22 @@
-﻿'''paev=input("sisesta päeva nimetus =>" ) # puudu olid jutumärgid
+﻿'''paev=input("sisesta päeva nimetus =>" )''' # puudu olid jutumärgid
 #kui on neljapaev, siis "Uraaa, programeerimine"
-if paev.lower()=="neljapäev":
-    print("Uraaa, programeerimine")
+'''if paev.lower()=="neljapäev":
+    print("Uraaa, programeerimine")'''
+    
 #kui ei ole neljapaev, siis "Igatsen, programeerida tahaks!"
-if paev.lower()=="neljapäev":
+'''if paev.lower()=="neljapäev":
     print("Uraaa, programeerimine")
 else:
-    print("Igatsen, programeerida tahaks!")
+    print("Igatsen, programeerida tahaks!")'''
 
 #3 Tööpaevad ja nädalas
-if paev.lower()=="laupäev" or paev.lower()=="pühapäev":
+'''if paev.lower()=="laupäev" or paev.lower()=="pühapäev":
     print("Lõpuks, pean tööl käima")
 else:
     print("Tööpäev, pean tööl käima")'''
 
-'''# 4 1-esmaspäev, 2-teisipäev, 3-kolmapäev, 4-neljapäev, 5-reede, 6-laupäev, 7-pühapäev
-paev=int(input("Sisesta päeva number =>(1-7)"))
+# 4 1-esmaspäev, 2-teisipäev, 3-kolmapäev, 4-neljapäev, 5-reede, 6-laupäev, 7-pühapäev
+'''paev=int(input("Sisesta päeva number =>(1-7)"))
 if paev==1:
     print("Esmaspäev")
 elif paev==2:
@@ -367,10 +368,4 @@ if sugu.isalpha():
         print(f"Viimases bussis on {viimases_bussis} inimest")
     else:
         print("Palun sisesta positiivne arv")
-except:
-<<<<<<< HEAD:Valikud2_1.py
-    print("KIRJUTA AINULT ARV")'''
-=======
-    print("KIRJUTA AINULT ARV")'''
-    
->>>>>>> 33451f4f85bf4740c8c06848aa33cfebbf74c2c1:Teema2.Valikud.py
+except:'''
