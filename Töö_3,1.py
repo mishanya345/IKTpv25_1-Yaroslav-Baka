@@ -1,4 +1,4 @@
-﻿# Tsüklid (FOR, WHILE, WHILE True)
+# Tsüklid (FOR, WHILE, WHILE True)
 # Proovi lahendada kõik ülesanded kolme erineva tsükliga, kui see on võimalik.
 # 1️⃣ Sisestatakse 15 arvu.
 # Määrata, mitu neist on täisarvud.
@@ -115,16 +115,4 @@ for toll in range(1, 21):
 #9️ Panka pandi S eurot 3% intressiga.
 #Määrata, kui suureks summa muutub N aasta järel.
 
-S = float(input("Sisesta algne summa S eurodes: "))
-N = int(input("Sisesta aastate: "))
 
-
-
-
-
-
-
-            
-
-
-    
