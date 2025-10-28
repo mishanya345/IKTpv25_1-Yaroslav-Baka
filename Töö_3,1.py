@@ -1,6 +1,7 @@
+
 # Tsüklid (FOR, WHILE, WHILE True)
 # Proovi lahendada kõik ülesanded kolme erineva tsükliga, kui see on võimalik.
-# 1️⃣ Sisestatakse 15 arvu.
+# Sisestatakse 15 arvu.
 # Määrata, mitu neist on täisarvud.
 '''k=0 #loendur
 for i in range(15):
@@ -115,4 +116,44 @@ for toll in range(1, 21):
 #9️ Panka pandi S eurot 3% intressiga.
 #Määrata, kui suureks summa muutub N aasta järel.
 
+'''s = int(input('sisesta sinu hind:'))
+n = int(input("sisesta mittu aastat:"))
 
+r = 0.03
+
+summa = s*(1+r)**n # see on formula rasked protsenti
+
+print(f"summa on {summa:.2f}")'''
+
+#10 Klaviatuurilt sisestatakse 10 arvu paari.
+#Võrdle igas paaris olevaid arve ja väljasta neist suurem arv.
+'''try:
+    for i in range(10):
+        print(f"arvupaar {i+1}:")
+        arv1 = int(input("sisesta esimene arv"))
+        arv2 = int(input("sisesta teine arv"))
+        if int(arv1) and int(arv2):  
+            suurem = max(arv1, arv2)
+            print(f"suurem arv on {suurem}:\n")
+        else:
+            pass
+except:
+    print("kirjuta ainult täisarv")'''
+    
+#11 Leia kahekohaliste paaritute arvude korrutis, mis on jaguvad juhuslikult genereeritud arvuga.
+'''try:
+    import random
+
+    for i in range(1, 101):
+        if i % 2 == 1:
+            ranarv = random.randint(1, 10)
+            korrutis = i * ranarv
+            print(f'random arv kahekonaliste jagatud {ranarv} võrdub {korrutis:.2f}')
+        else:
+            print("see on kahekohalised arv")
+except:
+    print("Sisesta ainult numbreid")'''
+    
+
+        
+        

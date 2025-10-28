@@ -258,7 +258,7 @@ except:
 #Kasutaja sisestab ruudu küljed ning programm tuvastab kas tegemist saab olla ruuduga.
 #Koosta vastab plokkskeem ja salvesta see samasse kataloogi programmiga.
 
-'''pikkus = input("Sisesta ruudu külje pikkus => ")
+pikkus = input("Sisesta ruudu külje pikkus => ")
 laius = input("Sisesta ruudu külje laius => ")
 try:
     pikkus = int(pikkus)
@@ -271,7 +271,7 @@ try:
     else:
         print("Palun sisesta positiivne arv")
 except:
-    print("KIRJUTA AINULT ARV")'''
+    print("KIRJUTA AINULT ARV")
     
 #10 Matemaatika
 #Kasutaja sisestab kaks arvu ning programm küsib kasutajalt, mis tehet ta soovib (+-*/) ning viib kasutaja valiku ellu.
