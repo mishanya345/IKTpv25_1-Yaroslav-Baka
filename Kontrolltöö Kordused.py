@@ -1,4 +1,4 @@
-﻿#1️ Kirjuta programm, mis antud arvu n (1–9) põhjal kuvab ekraanile n jänest.
+﻿# 1️ Kirjuta programm, mis antud arvu n (1–9) põhjal kuvab ekraanile n jänest.
 #Kahe jänese vahel peab olema tühikurida (veerg tühikutega).
 #Lubatud on lisada tühikurida ka pärast viimast jänest.
 #Kopeeri jänese kuju arenduskeskkonda.
@@ -22,7 +22,7 @@ except:
     print("Palun sisesta korrektne arv vahemikus 1-9.") '''
 
 
- #2 Arvuta arvude summa 0 kuni L (kaasa peetakse). Näide: 0+1+2+3+…+14.
+ # 2 Arvuta arvude summa 0 kuni L (kaasa peetakse). Näide: 0+1+2+3+…+14.
 '''try:
     L = int(input("Sisesta arv L: "))
     summa = 0
@@ -33,7 +33,7 @@ except:
     print("Palun sisesta korrektne arv.")'''
 
 
-#3  Programmis genereeritud juhuslik täisarv esineb 0–100.
+# 3  Programmis genereeritud juhuslik täisarv esineb 0–100.
 #Kasutaja peab selle ära arvama mitte rohkem kui 10 katsega.
 #Pärast iganud katset teavitab programm, mida sisestatud arv on suurem või väiksem otsitavast.
 #Kui 10 katsega ei arva ära, kuvab programm õige vastuse.
@@ -62,8 +62,33 @@ try:
 except:
     print("Palun sisesta korrektne arv.")'''
 
-#Moodusta sisestatud arvust ümberpööratud arv ja kuva see ekraanile.
+# 4 Moodusta sisestatud arvust ümberpööratud arv ja kuva see ekraanile.
 #Näide: 3486 → 6843.
+'''try:
+    a = int(input("sisesta numbrid:  "))
+except:
+        print("Palun sisesta korrektne arv.")
+b = str(a)
+b = reversed(b)
+for i in b:
+    print(i, end="")'''
+
+
+# 5️ Leia sisestatud täisarvu numbrite summa ja korrutis.
+# Näide: 325 → summa = 10 (3+2+5), korrutis = 30 (3×2×5).
+
+'''try:
+    arv = int(input("Sisesta täisarv: "))
+    summa = 0
+    korrutis = 1
+    for number in str(arv):
+        summa += int(number)
+        korrutis *= int(number)
+    print("Numbrite summa on:", summa)
+    print("Numbrite korrutis on:", korrutis)
+except:
+    print("Palun sisesta korrektne täisarv.")'''
+
 
 
 
