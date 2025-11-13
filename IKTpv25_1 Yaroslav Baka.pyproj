@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>285bfd8e-f9a9-4733-b660-bb9eaddd3c45</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Kontrolltöö Kordused.py</StartupFile>
+    <StartupFile>töö4.2 kivi paber-käärid .py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -24,6 +24,7 @@
     <Compile Include="IKTpv25_1_Yaroslav_Baka.py" />
     <Compile Include="IKTpv25_1YaroslavBaka2.py" />
     <Compile Include="Kontrolltöö Kordused.py" />
+    <Compile Include="töö4.2 kivi paber-käärid .py" />
     <Compile Include="Valikud2_1.py" />
     <Compile Include="Valikud2_3.py" />
   </ItemGroup>

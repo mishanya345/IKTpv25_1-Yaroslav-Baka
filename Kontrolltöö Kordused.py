@@ -7,87 +7,98 @@
 #   (o o)
 #   / | \*
 
-'''try:
+try:
     n = int(input("Sisesta arv vahemikus 1-9: "))
-    jänes = [
-                "(\_/)\t", 
-                "(o o)\t", 
-               "/ | \*\t",
-                 ]
+except:
+    print("Palun sisesta korrektne arv vahemikus 1-9.") 
+    jänes1 = ("  (\_/)\t")
+    jänes2 = ("  (o o)\t")
+    jänes3 = ("  / | \\*")
+                 
     if 1 <= n <= 9:
-        for line in jänes:
+        for line in (jänes1, jänes2, jänes3):
+
             print(line * n, end='  ')
             print()
-except:
-    print("Palun sisesta korrektne arv vahemikus 1-9.") '''
+    else:
+          print("Palun sisesta korrektne arv vahemikus 1-9.") 
+
 
 
  # 2 Arvuta arvude summa 0 kuni L (kaasa peetakse). Näide: 0+1+2+3+…+14.
-'''try:
+try:
     L = int(input("Sisesta arv L: "))
+except:
+    print("Palun sisesta korrektne arv.")
     summa = 0
     for i in range(L + 1):
         summa += i
         print("Arvude summa 0 kuni", L, "on:", summa)
-except:
-    print("Palun sisesta korrektne arv.")'''
+
 
 
 # 3  Programmis genereeritud juhuslik täisarv esineb 0–100.
 #Kasutaja peab selle ära arvama mitte rohkem kui 10 katsega.
 #Pärast iganud katset teavitab programm, mida sisestatud arv on suurem või väiksem otsitavast.
 #Kui 10 katsega ei arva ära, kuvab programm õige vastuse.
-'''import random
-try:
-    randomarv = random.randint(0, 100)
-    katseid = 0
-    user = int(input("Arva ära juhuslikult genereeritud arv vahemikus 0-100: "))
-
-    while katseid <= 10:
-        katseid += 1
+import random
+randomarv = random.randint(0, 100)
+katseid = 0
+while True:
+    try:
+        user = int(input("Arva ära juhuslikult genereeritud arv vahemikus 0-100: "))
         if user > 100 or user < 0:
-            print("Arv peab olema vahemikus 0-100.")
-            user = int(input("Proovi uuesti: "))
-            continue
-        if user > randomarv:
-            print(" arv on väiksem")
-            user = int(input("Proovi uuesti: "))
-        elif user < randomarv:
-            print(" arv on suurem ")
-            user = int(input("Proovi uuesti: "))
-        else:
-            print("Õige vastus on:", randomarv)
-            print("Palju õnne! Arvasid arvu ära", katseid, "katsega.")
             break
-except:
-    print("Palun sisesta korrektne arv.")'''
+    except:
+        print("Palun sisesta korrektne arv.")
+while katseid <= 10:
+    katseid += 1
+    if user > 100 or user < 0:
+        print("Arv peab olema vahemikus 0-100.")
+
+        user = int(input("Proovi uuesti: "))
+        continue
+    if user > randomarv:
+        print(" arv on väiksem")
+        user = int(input("Proovi uuesti: "))
+    elif user < randomarv:
+        print(" arv on suurem ")
+        user = int(input("Proovi uuesti: "))
+    else:
+        print("Õige vastus on:", randomarv)
+        print("Palju õnne! Arvasid arvu ära", katseid, "katsega.")
+        katseid = False
+        break
+
+
 
 # 4 Moodusta sisestatud arvust ümberpööratud arv ja kuva see ekraanile.
 #Näide: 3486 → 6843.
-'''try:
+try:
     a = int(input("sisesta numbrid:  "))
 except:
         print("Palun sisesta korrektne arv.")
 b = str(a)
 b = reversed(b)
 for i in b:
-    print(i, end="")'''
+    print(i, end="")
 
 
 # 5️ Leia sisestatud täisarvu numbrite summa ja korrutis.
 # Näide: 325 → summa = 10 (3+2+5), korrutis = 30 (3×2×5).
 
-'''try:
+try:
     arv = int(input("Sisesta täisarv: "))
+except:
+    print("Palun sisesta korrektne täisarv.")
     summa = 0
     korrutis = 1
-    for number in str(arv):
-        summa += int(number)
-        korrutis *= int(number)
-    print("Numbrite summa on:", summa)
-    print("Numbrite korrutis on:", korrutis)
-except:
-    print("Palun sisesta korrektne täisarv.")'''
+for number in str(arv):
+    summa += int(number)
+    korrutis *= int(number)
+print("Numbrite summa on:", summa)
+print("Numbrite korrutis on:", korrutis)
+
 
 
 
