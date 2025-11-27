@@ -149,7 +149,7 @@ else:
 # 5️⃣ Vahetus ↔️
 # Vaheta loendis esimene ja viimane element, teine ja eelviimane jne.
 # Küsi kasutajalt, mitu paari vahetada. loendis on min 2 elem.
-import random
+'''import random
 
 
 loend_arvud=[]
@@ -175,7 +175,45 @@ while 1:
 
 for i in range(user):
     loend_arvud[i], loend_arvud[-(i+1)] = loend_arvud[-(i+1)], loend_arvud[i]
-print("Vahetatud loend: ", loend_arvud)
+print("Vahetatud loend: ", loend_arvud)'''
+
+
+# 6 „Arvud“ 🤷‍♂️
+# Leia loendi suurim arv, jaga see loendi pikkusega ja asenda see tulemusena.
+'''import random
+
+loend_arvud=[]
+mitu=random.randint(2,20)
+for i in range(mitu):
+    elem=random.randint(1,100)
+    loend_arvud.append(elem)
+print("Algne loend: ", loend_arvud)
+suurim = max(loend_arvud)
+mitu = len(loend_arvud)
+jagamine = suurim / len(loend_arvud)+1
+indeks = loend_arvud.index(suurim)
+loend_arvud[indeks] = round(jagamine,2)
+print("Uus loend: ", loend_arvud)
+print(f"Suurim arv oli: {suurim}, mis jagatud loendi pikkusega {len(loend_arvud)} on {jagamine:.2f}")'''
+
+# Sorteerimine 📊
+# Sorteeri nimekiri numbreid absoluutväärtuse järgi
+
+# kasvavalt ⬆️
+
+# või kahanevalt ⬇️
+import random
+
+s=[]
+mitu=random.randint(2,20)
+for i in range(mitu):
+    elem=random.randint(1,100)
+    s.append(elem)
+s.sort()
+print("Numbri loend absoluutväärtuse järgi kasvavalt: ", s)
+s.sort(reverse=True)
+print("Numbri loend absoluutväärtuse järgi kahanevalt: ", s)
+
     
          
 
