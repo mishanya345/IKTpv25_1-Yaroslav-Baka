@@ -99,3 +99,83 @@ print(f"Keskmine vanus: {keskmine:.2f}")'''
 '''list = [18, 19, 32, 41, 52, 12]
 for arv in list:
     print('*' * arv)'''
+
+# 4️⃣ Postiindeks 📮
+# Eestis koosnevad postiindeksid 5 numbrist, millest esimene number tähistab maakonda:
+
+# 1 – Tallinn 
+
+# 2 – Narva, Narva-Jõesuu 
+
+# 3 – Kohtla-Järve 
+
+# 4 – Ida-Virumaa, Lääne-Virumaa, Jõgevamaa 
+
+# 5 – Tartu linn 
+
+# 6 – Tartumaa, Põlvamaa, Võrumaa, Valgamaa 
+
+# 7 – Viljandimaa, Järvamaa, Harjumaa, Raplamaa 
+
+# 8 – Pärnumaa 
+
+# 9 – Läänemaa, Hiiumaa, Saaremaa
+
+# Kontrolli kasutaja sisestatud postiindeksit.
+# Näita, millisesse maakonda see kuulub.
+# Erireegel:
+
+# Tallinn, Narva, Kohtla-Järve → „Mine merre!”
+
+# Teised → „Mine metsa!”
+'''indexid =['Tallinn', 'Narva', 'Kohtla-Järve','Ida-Virumaa, Lääne-Virumaa, Jõgevamaa','Tartu linn','Tartumaa, Põlvamaa, Võrumaa, Valgamaa','Viljandimaa, Järvamaa, Harjumaa, Raplamaa','Pärnumaa','Läänemaa, Hiiumaa, Saaremaa']
+while True:
+    try:
+        user = int(input("Sisesta postiindeks: "))
+        if  10000 <= user <= 99999:
+           break
+        else:
+            print('kirjuta õige postiindeks')
+    except:
+        print('kirjuta õige andmetüüp')
+user_list=list(str(user))
+esimene_number=int(user_list[0])
+print(f"Sinu postiindeks kuulub maakonda: {indexid[esimene_number-1]}")
+if esimene_number in [0, 1, 2, 7]:
+    print("Mine merre!")
+else:
+    print("Mine metsa!")'''
+
+# 5️⃣ Vahetus ↔️
+# Vaheta loendis esimene ja viimane element, teine ja eelviimane jne.
+# Küsi kasutajalt, mitu paari vahetada. loendis on min 2 elem.
+import random
+
+
+loend_arvud=[]
+loend_tähed= []
+mitu=random.randint(2,20)
+for i in range(mitu):
+    elem=random.randint(1,100)
+    loend_arvud.append(elem)
+    täht=chr(random.randint(65,90))
+print(loend_arvud)
+while 1:
+    try:
+        user = int(input(f"Sisesta mitu paari soovid vahetada (max {mitu//2}): "))
+        if 1 <= user <= mitu//2:
+            break
+        else:
+            print(f"Vale sisestus.(max {mitu//2} )")
+
+    except:
+        print("Vale andmetüüp, proovi uuesti.")
+        continue
+
+
+for i in range(user):
+    loend_arvud[i], loend_arvud[-(i+1)] = loend_arvud[-(i+1)], loend_arvud[i]
+print("Vahetatud loend: ", loend_arvud)
+    
+         
+
