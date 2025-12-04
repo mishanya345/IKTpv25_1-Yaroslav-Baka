@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>285bfd8e-f9a9-4733-b660-bb9eaddd3c45</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>töö4,1.py</StartupFile>
+    <StartupFile>Tavalinefail.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,6 +26,8 @@
     <Compile Include="Kontrolltöö Kordused.py" />
     <Compile Include="listid.py" />
     <Compile Include="kivi paber-käärid.py" />
+    <Compile Include="modulifail.py" />
+    <Compile Include="Tavalinefail.py" />
     <Compile Include="töö4,1.py" />
     <Compile Include="Valikud2_1.py" />
     <Compile Include="Valikud2_3.py" />
