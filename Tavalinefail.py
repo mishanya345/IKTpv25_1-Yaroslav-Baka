@@ -36,8 +36,33 @@ kuu=season(kuu)
 print(f"on aastaaja {kuu}")'''
 
 #5
-
+'''
 arv = int_kontroll(input("Sisesta positiivne täisarv: "))
 aasta = int_kontroll(input("Sisesta aasta: "))
 arv1 = pangahoius(arv)
-print(f"Sisestasid arvu pärast kontrolli: {arv1}")
+print(f"Sisestasid arvu pärast kontrolli: {arv1}")'''
+
+#6
+
+'''aglarv = is_prime(int_kontroll(input("Sisesta positiivne täisarv: ")))
+if aglarv:
+    print("Sisestatud arv on algarv")
+else:
+    print("Sisestatud arv ei ole algarv")'''
+    
+#7 
+'''day = int_kontroll(input("Sisesta kuu päev (1-31): "))
+month = int_kontroll(input("Sisesta kuu number (1-12): "))
+year = int_kontroll(input("Sisesta aasta (nt 2024): "))
+print(f"Sisestatud kuupäev: {day}.{month}.{year}")
+print(today(day, month, year))'''
+
+#9
+ask_kokku = int_kontroll(input("Mitu arvu soovid ostida keskmise arvutamiseks? "))
+
+arvud = []
+for i in range(ask_kokku):
+    arv = float_kontroll(input(f"Sisesta {i+1}. arv: "))
+    arvud.append(arv)
+keskmine = average(*arvud)
+print(f"Arvude keskmine on: {keskmine}")

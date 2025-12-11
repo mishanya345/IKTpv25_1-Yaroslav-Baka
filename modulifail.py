@@ -31,7 +31,7 @@ def float_kontroll(sisend:str)->float:
             return arv
         except:
             sisend = input("palun sisesta ainult arv!")
-
+            return arv
 
 def int_kontroll(sisend:str)->int:
     """Kontrollib, kas sisestatud andmed on teisendavad int arvuks 
@@ -39,10 +39,11 @@ def int_kontroll(sisend:str)->int:
     : return/rtype: teisendatud int arv """
     while True:
         try:
-            return int(sisend)
+            arv = int(sisend)
+            return arv
         except:
-            print("palun sisesta täisarv:  ")
-        break
+            sisend = input("palun sisesta täisarv:  ")
+        
 # ül. 2
 def is_year_leap(aasta: int) -> bool:
     """Kontrollib, kas aasta on liigaasta
@@ -79,7 +80,7 @@ def season(kuu: int) -> str:
         return "sügis"
     else:
         return "vigane kuu"
-    
+#ül. 5   
 def pangahoius(a:float, years:int) -> float:
     """Arvutab pangahoiuse lõppsumma koos intressidega
     :param float a: algne hoiusesumma
@@ -88,3 +89,47 @@ def pangahoius(a:float, years:int) -> float:
     for i in range(years):
         a = a * 1.1
     return round(a, 2)
+#ül. 6
+def is_prime(n: int) -> bool:
+    """Kontrollib, kas arv on algarv
+    :param int n: kontrollitav arv
+    :return/rtype: True kui algarv, False kui mitte"""
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+#ül. 7
+def today(n1: int, n2: int, n3: int) -> int:
+    """Tagastab tänase kuupäeva
+    :return/rtype: str tänane kuupäev"""
+    from datetime import date
+    try:
+     
+        sisestatud_kuupaev = date(n3,n2,n1)
+        tana = date.today()
+    
+        print(f"Tänane kuupäev on: {date.today().day}.{date.today().month}.{date.today().year}")
+        
+        if sisestatud_kuupaev == tana:
+            return f"Sisestatud kuupäev ({sisestatud_kuupaev}) on TÄNA."
+        elif sisestatud_kuupaev < tana:
+            return f"Sisestatud kuupäev ({sisestatud_kuupaev}) on minevikus."
+        else:
+            return f"Sisestatud kuupäev ({sisestatud_kuupaev}) on tulevikus."
+        
+    
+    except:
+        print("vale andmetüüp on vaja (dd.mm.yyyy)")
+
+#ül. 8
+#ül. 9
+def average(*arvud) -> float:
+    """Arvutab suvalise arvu arvude keskmise
+    :param args: suvaline arv argumente
+    :return/rtype: float keskmine"""
+    if len(arvud) == 0:
+        return 0
+    else:
+        return sum(arvud) / len(arvud)
