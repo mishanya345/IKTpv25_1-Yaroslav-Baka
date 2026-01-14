@@ -5,7 +5,7 @@ def leia_projektifailid():
     fail = input("sisesta faililaiendi ilma punktita: ")
     failid = glob.glob(f'*.{fail}')
     print(f"Leitud failid: {failid}")
-    return f"'.'+{fail} failid, {failid}"
+    return f".{fail} failid: {failid}"
 
 def analuusi_faili_sisu():
     while True:
@@ -80,6 +80,43 @@ def leia_failid_algustahega():
     print(f"Leitud failid: {failid}")
     return f"algustäht failid {algustaht}:\nFailid: {failid}\n Kui palju: {len(failid)}"
 
+def loo_raporti_Faiili():
+    while True:
+        failitee = input("Sisesta raporti faili tee: ")
+        ask = input("Kas soovid lisada(l) või kustutada(k) või otsida(o) Faili? (l/k/o): ").lower()
+        
+        if ask == 'l':
+            if not os.path.isfile(failitee):
+                fail = open(failitee, 'w', encoding='utf-8')
+                fail.close()
+                return f"Kataloog {failitee} on loodud"
+            else:
+                print("Kataloog on juba olemas.")
+                break
 
-
-
+        elif ask == 'k':
+                if not  os.path.isfile(failitee):
+                    print("Faili ei leitud. Palun proovi uuesti.") 
+                else:
+                    try:
+                        ask2 = input("Faili ei leitud, kas soovid just kustutada? (jah/ei)")
+                        if ask2.lower() == 'jah':
+                            os.unlink(failitee)
+                            return f"Faili {failitee} on kustutatud"
+                        elif ask2.lower() == 'ei':
+                            print("Faili kustutamine katkestatud.")
+                            break
+                    except:
+                        print("palun kirjuta jah või ei")
+                        break
+                    
+        elif ask == 'o':
+            for juur, kaustad, failid, in os.walk('.'):
+                if failitee in failid:
+                    
+                    print(f"Faili asukoht: {os.path.join(juur, failitee)}")
+                    return f"{os.path.abspath(os.path.join(juur, failitee))} on leitud" #abspath annab kogu tee
+                else:
+                    print("Faili ei leitud.")
+                    break
+            break
