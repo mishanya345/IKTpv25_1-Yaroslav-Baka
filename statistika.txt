@@ -1,1 +1,2 @@
-C:\Users\opilane\source\repos\IKTpv25_1-Yaroslav-Baka\listid.py on leitud
+Kataloog fail on loodud
+Faili fail on kustutatud

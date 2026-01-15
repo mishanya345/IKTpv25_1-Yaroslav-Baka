@@ -2,12 +2,16 @@ import os
 import glob
 
 def leia_projektifailid():
+    """Otsib projektikaustast faile antud laiendiga."""
     fail = input("sisesta faililaiendi ilma punktita: ")
     failid = glob.glob(f'*.{fail}')
     print(f"Leitud failid: {failid}")
     return f".{fail} failid: {failid}"
 
 def analuusi_faili_sisu():
+    """
+    Analüüsib faili sisu ja otsib antud sõna.
+    """
     while True:
         failitee = input("Sisesta faili tee: ")
         if not os.path.isfile(failitee):
@@ -26,8 +30,10 @@ def analuusi_faili_sisu():
             break
     return f"{sõna_count}\nFaili pikkus: {length}\nSISU FAILIST:\n {sisu}\n"
 
-
 def loo_raporti_kataloog():
+    """
+    Loob raporti katalooge. See funktioon võimaldab kasutajal lisada, kustutada või otsida katalooge.
+    """
     while True:
         failitee = input("Sisesta raporti kataloogi tee: ")
         ask = input("Kas soovid lisada või kustutada või otsida kataloogi? (l/k/o)").lower()
@@ -48,7 +54,7 @@ def loo_raporti_kataloog():
                 return f"Kataloog {failitee} on kustutatud"
             else:
                 try:
-                    ask2 = input("Kataloogi ei leitud, kas soovid just kustutada? (jah/ei)")
+                    ask2 = input("Kas soovid just kustutada? (jah/ei)")
                     if ask2.lower() == 'jah':
                         os.rmdir(failitee)
                         return f"Kataloog {failitee} on kustutatud"
@@ -69,7 +75,9 @@ def loo_raporti_kataloog():
     return f"{failitee} on leitud"
 
 def leia_failid_algustahega():
-
+    """
+    Otsib projektikaustast faile, mille nimi algab antud tähega.
+    """
     while True:
         algustaht = input("Sisesta algustäht: ")
         if not algustaht.isalpha() or len(algustaht) != 1:
@@ -80,7 +88,10 @@ def leia_failid_algustahega():
     print(f"Leitud failid: {failid}")
     return f"algustäht failid {algustaht}:\nFailid: {failid}\n Kui palju: {len(failid)}"
 
-def loo_raporti_Faiili():
+def loo_raporti_faili():
+    """
+    Loob raporti faili. See funktioon võimaldab kasutajal lisada, kustutada või otsida faile nagu katalooge funktsioone.
+    """
     while True:
         failitee = input("Sisesta raporti faili tee: ")
         ask = input("Kas soovid lisada(l) või kustutada(k) või otsida(o) Faili? (l/k/o): ").lower()
@@ -99,7 +110,7 @@ def loo_raporti_Faiili():
                     print("Faili ei leitud. Palun proovi uuesti.") 
                 else:
                     try:
-                        ask2 = input("Faili ei leitud, kas soovid just kustutada? (jah/ei)")
+                        ask2 = input("Kas soovid just kustutada? (jah/ei)")
                         if ask2.lower() == 'jah':
                             os.unlink(failitee)
                             return f"Faili {failitee} on kustutatud"

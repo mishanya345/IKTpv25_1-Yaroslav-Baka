@@ -36,8 +36,8 @@ while True:
         print("Ilmnes viga, proovi uuesti. Viga:", e)
 
 if os.path.isfile('statistika.txt'):
-    os.unlink("statistika.txt")
-with open("statistika.txt", 'w', encoding='utf-8') as f:
+    os.unlink("statistika.txt") # kustutab faili, kui see on olemas
+with open("statistika.txt", 'w', encoding='utf-8') as f: # avab faili kirjutamiseks
     for rida in stat:
         f.write(str(rida) + "\n")
 print("Statistika on salvestatud faili 'statistika.txt'.")
